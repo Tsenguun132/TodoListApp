@@ -18,27 +18,53 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" reuseIdentifier="ChecklistItem" id="GZQ-SP-FcT">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="ChecklistItem" id="GZQ-SP-FcT">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GZQ-SP-FcT" id="aQU-jA-Qsb">
-                                    <rect key="frame" x="0.0" y="0.0" width="335" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="307" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wn2-wH-yCq">
+                                            <rect key="frame" x="16" y="5.5" width="26" height="32.5"/>
+                                            <attributedString key="attributedText">
+                                                <fragment content="✓">
+                                                    <attributes>
+                                                        <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="NSColor" red="0.13333" green="0.13333" blue="0.13333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <font key="NSFont" size="26" name="LucidaGrande"/>
+                                                        <real key="NSKern" value="0.0"/>
+                                                        <font key="NSOriginalFont" size="14" name="Helvetica"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                            <tabStops/>
+                                                        </paragraphStyle>
+                                                        <color key="NSStrokeColor" red="0.13333" green="0.13333" blue="0.13333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="brU-cM-RN9">
-                                            <rect key="frame" x="20" y="11" width="295" height="21"/>
+                                            <rect key="frame" x="48" y="11" width="42" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="brU-cM-RN9" firstAttribute="leading" secondItem="aQU-jA-Qsb" secondAttribute="leading" constant="20" symbolic="YES" id="MlO-Go-x3p"/>
-                                        <constraint firstAttribute="trailing" secondItem="brU-cM-RN9" secondAttribute="trailing" constant="20" symbolic="YES" id="aPS-Qw-iVh"/>
+                                        <constraint firstItem="brU-cM-RN9" firstAttribute="leading" secondItem="aQU-jA-Qsb" secondAttribute="leading" constant="48" id="MlO-Go-x3p"/>
+                                        <constraint firstItem="Wn2-wH-yCq" firstAttribute="centerY" secondItem="aQU-jA-Qsb" secondAttribute="centerY" id="Pkg-Su-7NG"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="brU-cM-RN9" secondAttribute="trailing" constant="20" symbolic="YES" id="aPS-Qw-iVh"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="brU-cM-RN9" secondAttribute="bottom" priority="750" constant="1" id="dCe-9V-TjR"/>
+                                        <constraint firstItem="Wn2-wH-yCq" firstAttribute="leading" secondItem="aQU-jA-Qsb" secondAttribute="leadingMargin" id="h13-2a-nzm"/>
+                                        <constraint firstItem="brU-cM-RN9" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Wn2-wH-yCq" secondAttribute="trailing" constant="6" id="sSM-iJ-bil"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Wn2-wH-yCq" secondAttribute="bottom" constant="-5" id="te1-kF-2fh"/>
                                         <constraint firstItem="brU-cM-RN9" firstAttribute="top" secondItem="aQU-jA-Qsb" secondAttribute="topMargin" priority="750" id="vlK-QO-RDP"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="ent-Ud-QKP" kind="show" identifier="EditItemSegue" trigger="accessoryAction" id="zJq-Kk-8Py"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -62,7 +88,7 @@
         <!--Title-->
         <scene sceneID="aZJ-wJ-SDK">
             <objects>
-                <tableViewController id="ent-Ud-QKP" customClass="AddItemTableViewController" customModule="CheckLists" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="ent-Ud-QKP" customClass="ItemDetailViewController" customModule="CheckLists" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="fff-LM-t9z">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -109,7 +135,7 @@
                                 <action selector="cancel:" destination="ent-Ud-QKP" id="l8t-4j-Qzm"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Add" id="v0C-rZ-qR4">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Done" id="v0C-rZ-qR4">
                             <connections>
                                 <action selector="done:" destination="ent-Ud-QKP" id="Iqx-tN-4Lw"/>
                             </connections>
@@ -142,4 +168,7 @@
             <point key="canvasLocation" x="-655" y="27"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="zJq-Kk-8Py"/>
+    </inferredMetricsTieBreakers>
 </document>
