@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E2839BD6224B9CF2009553A1 /* AddItemTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2839BD5224B9CF2009553A1 /* AddItemTableViewController.swift */; };
 		E2FFC8A9224A6B9600DE6A91 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FFC8A8224A6B9600DE6A91 /* AppDelegate.swift */; };
 		E2FFC8AB224A6B9600DE6A91 /* ChecklistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FFC8AA224A6B9600DE6A91 /* ChecklistViewController.swift */; };
 		E2FFC8AE224A6B9600DE6A91 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2FFC8AC224A6B9600DE6A91 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E2839BD5224B9CF2009553A1 /* AddItemTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemTableViewController.swift; sourceTree = "<group>"; };
 		E2FFC8A5224A6B9600DE6A91 /* CheckLists.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CheckLists.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2FFC8A8224A6B9600DE6A91 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2FFC8AA224A6B9600DE6A91 /* ChecklistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				E2FFC8A8224A6B9600DE6A91 /* AppDelegate.swift */,
 				E2FFC8AA224A6B9600DE6A91 /* ChecklistViewController.swift */,
 				E2FFC8BB224A8FCF00DE6A91 /* ChecklistItem.swift */,
+				E2839BD5224B9CF2009553A1 /* AddItemTableViewController.swift */,
 				E2FFC8BD224B2C0C00DE6A91 /* TodoList.swift */,
 				E2FFC8AC224A6B9600DE6A91 /* Main.storyboard */,
 				E2FFC8AF224A6B9800DE6A91 /* Assets.xcassets */,
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2FFC8AB224A6B9600DE6A91 /* ChecklistViewController.swift in Sources */,
+				E2839BD6224B9CF2009553A1 /* AddItemTableViewController.swift in Sources */,
 				E2FFC8BC224A8FCF00DE6A91 /* ChecklistItem.swift in Sources */,
 				E2FFC8A9224A6B9600DE6A91 /* AppDelegate.swift in Sources */,
 				E2FFC8BE224B2C0C00DE6A91 /* TodoList.swift in Sources */,
